@@ -12,6 +12,8 @@ services:
       MYSQL_ROOT_PASSWORD: 'random_admin_pass'
     volumes:
       - db:/var/lib/mysql
+    ports:
+      - '3306:3306'
   #      - ./db-backup.sql:/docker-entrypoint-initdb.d/db_backup.sql
 
   wordpress:
